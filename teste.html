@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste - Mural Eletrônico</title>
+    <link href="css/bootstrap-5.3.min.css" rel="stylesheet">
+    <link href="css/estilo.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(135deg, #37b637 0%, #37b637 100%);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+                <strong>📺 Mural Eletrônico</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.php">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>🧪 Página de Teste</h1>
+            <p class="lead mb-0">Componentes e funcionalidades do sistema</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <!-- Componentes Bootstrap -->
+                <section class="mb-5">
+                    <h2>📦 Componentes Bootstrap</h2>
+                    <p class="text-muted">Exemplos de componentes reutilizáveis</p>
+
+                    <!-- Alerts -->
+                    <div class="mb-4">
+                        <h4>Alertas</h4>
+                        <div class="alert alert-primary" role="alert">
+                            ℹ️ <strong>Info:</strong> Esta é uma mensagem informativa
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            ✅ <strong>Sucesso:</strong> Operação realizada com sucesso
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            ⚠️ <strong>Aviso:</strong> Tenha cuidado com esta ação
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            ❌ <strong>Erro:</strong> Ocorreu um problema
+                        </div>
+                    </div>
+
+                    <!-- Botões -->
+                    <div class="mb-4">
+                        <h4>Botões</h4>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button type="button" class="btn btn-primary">Primário</button>
+                            <button type="button" class="btn btn-secondary">Secundário</button>
+                            <button type="button" class="btn btn-success">Sucesso</button>
+                            <button type="button" class="btn btn-danger">Perigo</button>
+                            <button type="button" class="btn btn-warning">Aviso</button>
+                            <button type="button" class="btn btn-info">Info</button>
+                        </div>
+                        <div class="d-flex gap-2 flex-wrap mt-3">
+                            <button type="button" class="btn btn-outline-primary">Primário</button>
+                            <button type="button" class="btn btn-outline-secondary">Secundário</button>
+                            <button type="button" class="btn btn-outline-success">Sucesso</button>
+                            <button type="button" class="btn btn-outline-danger">Perigo</button>
+                        </div>
+                    </div>
+
+                    <!-- Badges -->
+                    <div class="mb-4">
+                        <h4>Badges</h4>
+                        <p>
+                            <span class="badge badge-primary">Primário</span>
+                            <span class="badge bg-secondary">Secundário</span>
+                            <span class="badge bg-success">Sucesso</span>
+                            <span class="badge bg-danger">Perigo</span>
+                            <span class="badge bg-warning text-dark">Aviso</span>
+                            <span class="badge bg-info">Info</span>
+                        </p>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="mb-4">
+                        <h4>Cards</h4>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="card feature-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">📱 Card 1</h5>
+                                        <p class="card-text">Exemplo de card com conteúdo personalizado.</p>
+                                        <a href="#" class="btn btn-sm btn-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="card feature-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">🎨 Card 2</h5>
+                                        <p class="card-text">Cards respondem ao hover com animações.</p>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Saiba mais</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabelas -->
+                    <div class="mb-4">
+                        <h4>Tabelas</h4>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nome</th>
+                                        <th>Status</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Item A</td>
+                                        <td><span class="status-active">✅ Ativo</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary">Editar</button>
+                                            <button class="btn btn-sm btn-danger">Remover</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Item B</td>
+                                        <td><span class="status-inactive">⛔ Inativo</span></td>
+                                        <td>
+                                            <button class="btn btn-sm btn-primary">Editar</button>
+                                            <button class="btn btn-sm btn-danger">Remover</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Formulários -->
+                    <div class="mb-4">
+                        <h4>Formulários</h4>
+                        <form class="row g-3">
+                            <div class="col-md-6">
+                                <label for="inputEmail4" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="seu@email.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Senha</label>
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="••••••••">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Endereço</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">Estado</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Escolha...</option>
+                                    <option>Rondônia</option>
+                                    <option>São Paulo</option>
+                                    <option>Minas Gerais</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Concordo com os termos
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- Botões -->
+                <div class="d-flex gap-2 justify-content-center mt-5">
+                    <a href="index.php" class="btn btn-primary">← Voltar ao Início</a>
+                    <a href="sobre.html" class="btn btn-outline-primary">Sobre o Sistema</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-5 py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Sistema Mural Eletrônico - IFRO</p>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap-5.3.bundle.min.js"></script>
+    <script src="js/bootstrap-init.js"></script>
+</body>
+</html>
+

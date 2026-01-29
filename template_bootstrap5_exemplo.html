@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mural Eletrônico - Bootstrap 5.3</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="css/bootstrap-5.3.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsb8hLrzVSFS2uLUftVo9" crossorigin="anonymous">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
+    <style>
+        /* Sobrescrita rápida de estilos, se necessário */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR (Navegação) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.php">
+                <span class="fw-bold">🎯 Mural Eletrônico</span>
+            </a>
+            
+            <!-- Botão toggle para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu de navegação -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="mural.php">Mural</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="lista_midias.php">Mídias</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Gerenciar
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="form_cadastro_midia.php">Cadastrar Mídia</a></li>
+                            <li><a class="dropdown-item" href="lista_usuarios.php">Usuários</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="logout.php">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="container-fluid py-4">
+        <div class="row">
+            <!-- Sidebar (opcional) -->
+            <aside class="col-lg-3 d-none d-lg-block mb-4 mb-lg-0">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">Menu</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <a href="mural.php" class="text-decoration-none">📺 Mural Ativo</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="lista_midias_hoje.php" class="text-decoration-none">📅 Hoje</a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="lista_midias_vencidas.php" class="text-decoration-none">⏰ Vencidas</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Conteúdo principal -->
+            <section class="col-lg-9">
+                <!-- Breadcrumb (caminho de navegação) -->
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.php">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Página Atual</li>
+                    </ol>
+                </nav>
+
+                <!-- Alertas de exemplo -->
+                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                    <strong>Bem-vindo!</strong> Você está usando Bootstrap 5.3.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                <!-- Cards de exemplo -->
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">📊 Estatísticas</h5>
+                                <p class="card-text">Visualize dados e estatísticas do mural.</p>
+                                <a href="#" class="btn btn-primary btn-sm">Ver Mais</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">⚙️ Configurações</h5>
+                                <p class="card-text">Gerencie as configurações do sistema.</p>
+                                <a href="#" class="btn btn-secondary btn-sm">Configurar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">🆘 Suporte</h5>
+                                <p class="card-text">Entre em contato com o suporte técnico.</p>
+                                <a href="#" class="btn btn-info btn-sm">Contatar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabela de exemplo -->
+                <div class="card mt-4">
+                    <div class="card-header bg-light">
+                        <h5 class="card-title mb-0">Exemplo de Tabela</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover mb-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nome</th>
+                                    <th>Status</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Mídia Exemplo</td>
+                                    <td><span class="badge bg-success">Ativo</span></td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-primary">Editar</a>
+                                        <a href="#" class="btn btn-sm btn-outline-danger">Deletar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Modal de exemplo -->
+                <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Abrir Modal
+                </button>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Título do Modal</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                Conteúdo do modal aqui...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                <button type="button" class="btn btn-primary">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (Rodapé) -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Mural Eletrônico - IFRO. Powered by Bootstrap 5.3</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 Bundle JS (inclui Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWbSxccPQtF3EpF3fnJHog6LaEVF6d1uS/E1pSJHVjJWS1J1w" crossorigin="anonymous"></script>
+
+    <!-- Script de inicialização do Bootstrap -->
+    <script src="js/bootstrap-init.js"></script>
+
+    <!-- JavaScript personalizado -->
+    <script src="js/clock.js" type="module"></script>
+
+    <script>
+        // Exemplo de uso de tooltips:
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ativar tooltips
+            const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            tooltipTriggerList.map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+        });
+    </script>
+</body>
+</html>

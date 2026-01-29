@@ -1,0 +1,230 @@
+/**
+ * GUIA DE ATUALIZAÇÃO BOOTSTRAP v2.2.2 → v5.3.0
+ * ================================================
+ * 
+ * Este arquivo documenta as principais mudanças necessárias para
+ * atualizar seu projeto de Bootstrap 2 para Bootstrap 5.
+ */
+
+/* ========== MUDANÇAS PRINCIPAIS ========== */
+
+/**
+ * 1. ATUALIZAR LINKS HTML
+ * 
+ * ANTES (Bootstrap 2):
+ * <link rel="stylesheet" href="css/bootstrap.min.css">
+ * <script src="assets/js/bootstrap-transition.js"></script>
+ * <script src="assets/js/bootstrap-alert.js"></script>
+ * ... (todos os arquivos individuais)
+ * 
+ * AGORA (Bootstrap 5):
+ * <link href="css/bootstrap-5.3.min.css" rel="stylesheet">
+ * <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ */
+
+/* ========== CLASSES CSS REMOVIDAS/RENOMEADAS ========== */
+
+/**
+ * 2. CLASSES GRID REMOVIDAS
+ * 
+ * span1-12 → col / col-1 a col-12
+ * offset1-12 → offset-1 a offset-12
+ * 
+ * ANTES:
+ * <div class="row">
+ *   <div class="span4">...</div>
+ *   <div class="span8">...</div>
+ * </div>
+ * 
+ * AGORA:
+ * <div class="row">
+ *   <div class="col-md-4">...</div>
+ *   <div class="col-md-8">...</div>
+ * </div>
+ */
+
+/**
+ * 3. CLASSES DE CORES ATUALIZADAS
+ * 
+ * ANTES (Bootstrap 2):
+ * .alert-warning, .alert-danger, .alert-success, .alert-info
+ * .label-success, .label-warning, .label-danger, .label-info
+ * .btn-primary, .btn-warning, .btn-danger, .btn-success
+ * 
+ * AGORA (Bootstrap 5):
+ * Todas as classes acima permanecem, mas com cores atualizadas
+ * Novas utilidades CSS usando variáveis CSS (--bs-primary, --bs-success, etc)
+ */
+
+/**
+ * 4. NAVBAR (NAVEGAÇÃO)
+ * 
+ * ANTES:
+ * <div class="navbar">
+ *   <div class="navbar-inner">
+ *     <a class="brand" href="#">Logo</a>
+ *     <ul class="nav">
+ *       <li><a href="#">Home</a></li>
+ *     </ul>
+ *   </div>
+ * </div>
+ * 
+ * AGORA:
+ * <nav class="navbar navbar-expand-lg navbar-light bg-light">
+ *   <div class="container-fluid">
+ *     <a class="navbar-brand" href="#">Logo</a>
+ *     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+ *       <span class="navbar-toggler-icon"></span>
+ *     </button>
+ *     <div class="collapse navbar-collapse" id="navbarNav">
+ *       <ul class="navbar-nav ms-auto">
+ *         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+ *       </ul>
+ *     </div>
+ *   </div>
+ * </nav>
+ */
+
+/**
+ * 5. BOTÕES
+ * 
+ * ANTES:
+ * <button class="btn btn-primary btn-large">Clique</button>
+ * 
+ * AGORA:
+ * <button class="btn btn-primary btn-lg">Clique</button>
+ * (pequenas mudanças no nome das classes: btn-small → btn-sm, btn-large → btn-lg, btn-mini → btn-sm)
+ */
+
+/**
+ * 6. MODAIS
+ * 
+ * ANTES:
+ * <div class="modal hide fade">
+ *   <div class="modal-header">
+ *     <button type="button" class="close" data-dismiss="modal">×</button>
+ *   </div>
+ *   <div class="modal-body">...</div>
+ * </div>
+ * <script>$('.modal').modal()</script>
+ * 
+ * AGORA:
+ * <div class="modal fade" id="exampleModal" tabindex="-1">
+ *   <div class="modal-dialog">
+ *     <div class="modal-content">
+ *       <div class="modal-header">
+ *         <h5 class="modal-title">Modal title</h5>
+ *         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+ *       </div>
+ *       <div class="modal-body">...</div>
+ *       <div class="modal-footer">
+ *         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+ *         <button type="button" class="btn btn-primary">Salvar</button>
+ *       </div>
+ *     </div>
+ *   </div>
+ * </div>
+ */
+
+/**
+ * 7. FORMAS (FORMULÁRIOS)
+ * 
+ * ANTES:
+ * <form class="form-horizontal">
+ *   <div class="control-group">
+ *     <label class="control-label">Email</label>
+ *     <div class="controls">
+ *       <input type="email" class="input-xlarge">
+ *     </div>
+ *   </div>
+ * </form>
+ * 
+ * AGORA:
+ * <form>
+ *   <div class="mb-3">
+ *     <label for="exampleInputEmail1" class="form-label">Email</label>
+ *     <input type="email" class="form-control" id="exampleInputEmail1">
+ *   </div>
+ * </form>
+ */
+
+/**
+ * 8. HELPER CLASSES MUDADAS
+ * 
+ * .pull-left → float-start
+ * .pull-right → float-end
+ * .text-left → text-start
+ * .text-right → text-end
+ * .center-block → mx-auto (margin: auto)
+ * .hide → d-none
+ * .show → d-block (ou use display utilities)
+ */
+
+/**
+ * 9. RESPONSIVE BREAKPOINTS
+ * 
+ * Bootstrap 2:
+ * - < 768px (mobile)
+ * - 768px-979px (tablet) 
+ * - ≥ 980px (desktop)
+ * 
+ * Bootstrap 5:
+ * - < 576px (xs)
+ * - ≥ 576px (sm)
+ * - ≥ 768px (md)
+ * - ≥ 992px (lg)
+ * - ≥ 1200px (xl)
+ * - ≥ 1400px (xxl)
+ * 
+ * Usar: col-md-4 (médio), col-lg-3 (grande), etc.
+ */
+
+/**
+ * 10. JAVASCRIPT PLUGINS
+ * 
+ * ANTES (Bootstrap 2):
+ * $('#myModal').modal()
+ * $('[rel="tooltip"]').tooltip()
+ * 
+ * AGORA (Bootstrap 5):
+ * const myModal = new bootstrap.Modal(document.getElementById('myModal'))
+ * const tooltip = new bootstrap.Tooltip(document.querySelector('[data-bs-toggle="tooltip"]'))
+ * 
+ * Usar atributos data-bs-* em vez de data-*
+ */
+
+/* ========== ARQUIVO CSS PERSONALIZADO (estilo.css) ========== */
+
+/**
+ * As seguintes mudanças provavelmente serão necessárias em estilo.css:
+ * 
+ * 1. Verificar .span, .span1-12, .offset (remover ou atualizar para col)
+ * 2. Verificar .btn-*, .label-*, .alert-* (cores podem ter mudado)
+ * 3. Verificar .pull-left, .pull-right, .hide, .show
+ * 4. Revisar breakpoints @media (576px, 768px, 992px, 1200px, 1400px)
+ * 5. Testar responsividade em diferentes tamanhos de tela
+ */
+
+/* ========== PASSOS RECOMENDADOS ========== */
+
+/**
+ * 1. Criar cópia de backup dos arquivos atuais
+ * 2. Atualizar o link CSS: bootstrap.min.css → bootstrap-5.3.min.css
+ * 3. Adicionar script JS do Bootstrap 5:
+ *    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ * 4. Remover links individuais de plugins do Bootstrap 2
+ * 5. Testar o layout em navegadores diferentes
+ * 6. Atualizar classes CSS conforme necessário
+ * 7. Verificar formulários, botões e modais
+ * 8. Revisar e atualizar estilo.css
+ * 9. Testar funcionalidade JavaScript (modais, tooltips, etc)
+ * 10. Validar responsividade mobile
+ */
+
+/* ========== FERRAMENTAS ÚTEIS ========== */
+
+/**
+ * Migration tool: https://getbootstrap.com/docs/5.0/getting-started/download/
+ * Documentação: https://getbootstrap.com/docs/5.3/
+ * TypeScript definitions: npm install --save-dev @types/bootstrap
+ */

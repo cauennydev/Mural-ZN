@@ -1,0 +1,24 @@
+body {
+
+
+}
+
+.hora {
+	
+	margin: 5% 0 auto 0;
+	font-size: 140pt;
+	text-align: center;
+	text-shadow: #600 1px 2px 5px;
+	color: white;
+
+}
+
+.relogio {
+  
+	background-image: url("../img/bg_time.png");
+	width: 1440px; 
+	height: 900px; 
+
+
+}
+

@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-align: center;	
+	}
+
+body{
+		
+		font-family: sans-serif;
+		/* background-image: url("images/back.jpg")   */
+	}
+	
+
+
+#slides{
+	width: 380px;
+	height: 700px;
+	margin: 0 auto;
+	overflow: hidden;		
+	}
+
+img {
+	width: 100%;  /* largura  - Ajusta a imagem ao tamanho da tela */
+	height: 100%;  /* Altura */
+}
+
+.slideshow {  	
+		width: 1280px;     				  
+		height: 677px  
+		
+		}
+				  /*  AJUSTAR DE ACORDO COM A TELA DE EXIBIÇÃO */
+
+
+/*.slideshow img { padding: 5px; 
+					  border: 1px solid #ccc; 
+					  background-color: #eee; }
+
+*/
+
+
+
