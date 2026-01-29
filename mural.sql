@@ -7,6 +7,19 @@
 -- Versão do servidor: 5.5.32
 -- versão do PHP: 5.4.19
 
+-- Base de Dados: `mural`
+CREATE TABLE IF NOT EXISTS `usuarios` (
+  `email` varchar(100) COLLATE utf8_bin NOT NULL,
+  `cod_usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) COLLATE utf8_bin NOT NULL,
+  `login` varchar(50) COLLATE utf8_bin NOT NULL,
+  `Senha` varchar(50) COLLATE utf8_bin NOT NULL,
+  `arquivo` varchar(255) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`cod_usuario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=2 ;
+/* A TABELA USUARIOS É PARA ARMAZENAR INFORMAÇÕES DOS USUÁRIOS DO SISTEMA */
+-- --------------------------------------------------------
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
