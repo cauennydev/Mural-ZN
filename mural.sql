@@ -58,6 +58,9 @@ CREATE TABLE IF NOT EXISTS `midias` (
 INSERT INTO `usuarios` (`email`, `cod_usuario`, `nome`, `login`, `Senha`, `arquivo`) VALUES
 ('robson.pires.borges@gmail.com', 1, 'Administrador', 'admin', 'admin', '');
 
+INSERT INTO `usuarios` (`email`, `cod_usuario`, `nome`, `login`, `Senha`, `arquivo`) VALUES
+('', 3, 'Cauenny', 'cauenny', 'cauenny', '');
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
